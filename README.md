@@ -1,24 +1,60 @@
 # README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column             | Type   | Options     |
+| ---------------    | ------ | ----------- |
+| name               | string | null: false |
+| email              | string | null: false |
+| encrypted_password | string | null: false |
+| first_name         | string | null: false |
+| family_name        | string | null: false |
+| birthday           | date   | null: false |
 
-* Ruby version
+### Association
+- has_many :shops
+- has_many :comments
+## shops テーブル
 
-* System dependencies
+| Column                   | Type      | Options          |
+| ----------------------   | ------    | --------------   |
+| name                     | string    | null: false      |
+| Prefecture_id            | integer   | null: false      |
+| shop_genre_id            | integer   | null: false      |
+| city                     | string    | null: false      |
+| address                  | string    | null: false      |
+| phone_number             | string    | null: false      |
+| user                     | references|foreign_key: true |
+| menu                     | references|foreign_key: true |
 
-* Configuration
+### Association
 
-* Database creation
+- belongs_to : user
+- has_one :menu
 
-* Database initialization
+## comments テーブル
 
-* How to run the test suite
+| Column    | Type       | Options                        |
+| --------- | ---------- | ------------------------------ |
+| text      | text       | null: false                    |
+| user      | references | foreign_key: true              |
+| menu      | references | foreign_key: true              |
 
-* Services (job queues, cache servers, search engines, etc.)
+### Association
+-belongs_to : user
+-belongs_to : shop
 
-* Deployment instructions
 
-* ...
+## menu テーブル
+
+| Column                 | Type       | Options           |
+| ---------------------- | ---------  | --------------    |
+| name                   | string     | null: false       |
+| food_genre_id          | integer    | null: false       |
+| value                  | string     | null: false       |
+| shop                   | refarences | foreign_key: true |
+### Association
+-has_many :comments
+-belongs_to: shop
+
