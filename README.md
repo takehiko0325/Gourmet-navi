@@ -51,9 +51,8 @@
 | Column                 | Type       | Options           |
 | ---------------------- | ---------  | --------------    |
 | name                   | string     | null: false       |
-| food_genre_id          | integer    | null: false       |
 | value                  | string     | null: false       |
-| shop                   | refarences | foreign_key: true |
+| shop                   | references | foreign_key: true |
 ### Association
 -has_many :comments
 -belongs_to: shop
