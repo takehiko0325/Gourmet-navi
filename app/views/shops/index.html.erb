@@ -1,0 +1,366 @@
+
+<div id="wrapper">
+
+<header>
+	<div class="inner">
+		<h1>
+		<%=link_to image_tag("logo.png",alt: "目玉グルメナビ") ,root_path%>
+		</h1>
+		<div id="header_search_wrap">
+			<div class="search_box">
+				<h4>店舗を検索</h4>
+				<div class="select_btn">
+					<select name="select" onChange="location.href=value;">
+						<option value="#">ジャンルで検索</option>
+						<option value="/restaurant_list.html">ジャンル名</option>
+						<option value="/restaurant_list.html">ジャンル名</option>
+						<option value="/restaurant_list.html">ジャンル名</option>
+						<option value="/restaurant_list.html">ジャンル名</option>
+						<option value="/restaurant_list.html">ジャンル名</option>
+					</select>
+				</div>
+				<div class="select_btn">
+					<select name="select" onChange="location.href=value;">
+						<option value="#">地域で検索</option>
+						<option value="/restaurant_list.html">地域名</option>
+						<option value="/restaurant_list.html">地域名</option>
+						<option value="/restaurant_list.html">地域名</option>
+						<option value="/restaurant_list.html">地域名</option>
+						<option value="/restaurant_list.html">地域名</option>
+					</select>
+				</div>
+			</div><!-- /search_box -->
+			<div class="search_box">
+				<h4>グルメを検索</h4>
+				<div class="select_btn">
+					<select name="select" onChange="location.href=value;">
+						<option value="#">ジャンルで検索</option>
+						<option value="/gourmet_list.html">ジャンル名</option>
+						<option value="/gourmet_list.html">ジャンル名</option>
+						<option value="/gourmet_list.html">ジャンル名</option>
+						<option value="/gourmet_list.html">ジャンル名</option>
+						<option value="/gourmet_list.html">ジャンル名</option>
+					</select>
+				</div>
+				<div class="select_btn">
+					<select name="select" onChange="location.href=value;">
+						<option value="#">地域で検索</option>
+						<option value="/gourmet_list.html">地域名</option>
+						<option value="/gourmet_list.html">地域名</option>
+						<option value="/gourmet_list.html">地域名</option>
+						<option value="/gourmet_list.html">地域名</option>
+						<option value="/gourmet_list.html">地域名</option>
+					</select>
+				</div>
+			</div><!-- /search_box -->
+		</div><!-- /header_search_wrap -->
+		<div id="header_usernav_wrap">
+			<div id="header_usernav_nologin">
+				<a href="login.html" class="btn_s login">ログイン</a>
+				<a href="signup.html" class="btn_s signup">新規登録</a>
+			</div>
+			<!--ログイン中の場合こちらを表示
+			<div id="header_usernav_login">
+				<div id="header_usernav_username">お名前さま</div>
+				<a href="★★★★★★★★★★★★★★★.html" class="btn_s logout">ログアウト</a>
+			</div>
+			-->
+		</div><!-- /header_usernav_wrap -->
+	</div>
+
+
+
+
+</header>
+
+<main>
+	<ul id="mainvisual">
+		<li>
+			<%=link_to image_tag("mainvisual01.jpg" )%>
+		</li>
+		<li>
+	    <%=link_to image_tag("mainvisual02.jpg" )%>
+		</li>
+	</ul><!-- /mainvisual -->
+	
+	<div class="inner">
+	
+		<div id="howto" class="contents">
+			<h2>目玉グルメナビの使い方</h2>
+			<ul class="howto_list">
+				<li>
+					<div class="howto_img">
+					<%=link_to image_tag("howto01.png" )%>
+					</div>
+					<div class="howto_text">
+						<h3>おすすめグルメを投稿</h3>
+						<p>飲食店のメニューにレビューを投稿してみよう！</p>
+						<div class="search_box">
+							<h4>店舗を検索</h4>
+							<div class="select_btn">
+								<select name="select" onChange="location.href=value;">
+									<option value="#">ジャンルで検索</option>
+									<option value="/restaurant_list.html">ジャンル名</option>
+									<option value="/restaurant_list.html">ジャンル名</option>
+									<option value="/restaurant_list.html">ジャンル名</option>
+									<option value="/restaurant_list.html">ジャンル名</option>
+									<option value="/restaurant_list.html">ジャンル名</option>
+								</select>
+							</div>
+							<div class="select_btn">
+								<select name="select" onChange="location.href=value;">
+									<option value="#">地域で検索</option>
+									<option value="/restaurant_list.html">地域名</option>
+									<option value="/restaurant_list.html">地域名</option>
+									<option value="/restaurant_list.html">地域名</option>
+									<option value="/restaurant_list.html">地域名</option>
+									<option value="/restaurant_list.html">地域名</option>
+								</select>
+							</div>
+						</div><!-- /search_box -->
+					</div>
+				</li>
+				<li>
+					<div class="howto_img">
+					<%=link_to image_tag("howto02.png" )%>
+					</div>
+					<div class="howto_text">
+						<h3>みんなのグルメをチェック</h3>
+						<p>気になる店の評判メニューを見てみよう！</p>
+						<div class="search_box">
+							<h4>グルメを検索</h4>
+							<div class="select_btn">
+								<select name="select" onChange="location.href=value;">
+									<option value="#">ジャンルで検索</option>
+									<option value="/gourmet_list.html">ジャンル名</option>
+									<option value="/gourmet_list.html">ジャンル名</option>
+									<option value="/gourmet_list.html">ジャンル名</option>
+									<option value="/gourmet_list.html">ジャンル名</option>
+									<option value="/gourmet_list.html">ジャンル名</option>
+								</select>
+							</div>
+							<div class="select_btn">
+								<select name="select" onChange="location.href=value;">
+									<option value="#">地域で検索</option>
+									<option value="/gourmet_list.html">地域名</option>
+									<option value="/gourmet_list.html">地域名</option>
+									<option value="/gourmet_list.html">地域名</option>
+									<option value="/gourmet_list.html">地域名</option>
+									<option value="/gourmet_list.html">地域名</option>
+								</select>
+							</div>
+						</div><!-- /search_box -->
+					</div>
+				</li>
+			</ul>
+		</div><!-- /howto -->
+
+		<div id="pickup_gourmet" class="contents">
+			<h2>今週の目玉グルメ</h2>
+			<ul class="gourmet_list">
+				<li>
+					<a href="/00000001/gourmet.html">
+						<div class="gourmet_img">
+						<%=link_to image_tag("sample01.jpg" )%>
+						</div>
+						<div class="gourmet_text">
+							<div class="restaurant">店名店名店名店名店名</div>
+							<div class="area">〇〇県〇〇〇〇市</div>
+							<div class="gourmet_name">商品名商品名商品名商品名商品名</div>
+							<ul class="review">
+								<li>
+									<div class="rating" data-rate="4"></div>
+									<div class="review_text">
+										<p>うまみの宝石箱や〜！！レビュー1件づつ順番に出す〜〜〜</p>
+									</div>
+								</li>
+								<li>
+									<div class="rating" data-rate="2.5"></div>
+									<div class="review_text">
+										<p>二人目のレビュアーや〜！！</p>
+									</div>
+								</li>
+								<li>
+									<div class="rating" data-rate="5"></div>
+									<div class="review_text">
+										<p>三人目のレビュアーや〜〜〜〜！！</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="/00000001/gourmet.html">
+						<div class="gourmet_img">
+						<%=link_to image_tag("sample02.jpg" )%>
+						</div>
+						<div class="gourmet_text">
+							<div class="restaurant">店名店名店名店名店名</div>
+							<div class="area">〇〇県〇〇〇〇市</div>
+							<div class="gourmet_name">商品名商品名商品名商品名商品名</div>
+							<ul class="review">
+								<li>
+									<div class="rating" data-rate="4"></div>
+									<div class="review_text">
+										<p>うまみの宝石箱や〜！！レビュー1件づつ順番に出す〜〜〜</p>
+									</div>
+								</li>
+								<li>
+									<div class="rating" data-rate="2.5"></div>
+									<div class="review_text">
+										<p>二人目のレビュアーや〜！！</p>
+									</div>
+								</li>
+								<li>
+									<div class="rating" data-rate="5"></div>
+									<div class="review_text">
+										<p>三人目のレビュアーや〜〜〜〜！！</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="/00000001/gourmet.html">
+					<div class="gourmet_img">
+					<%=link_to image_tag("sample02.jpg")%>
+					</div>
+						<div class="gourmet_text">
+							<div class="restaurant">店名店名店名店名店名</div>
+							<div class="area">〇〇県〇〇〇〇市</div>
+							<div class="gourmet_name">商品名商品名商品名商品名商品名</div>
+							<ul class="review">
+								<li>
+									<div class="rating" data-rate="4"></div>
+									<div class="review_text">
+										<p>うまみの宝石箱や〜！！レビュー1件づつ順番に出す〜〜〜</p>
+									</div>
+								</li>
+								<li>
+									<div class="rating" data-rate="2.5"></div>
+									<div class="review_text">
+										<p>二人目のレビュアーや〜！！</p>
+									</div>
+								</li>
+								<li>
+									<div class="rating" data-rate="5"></div>
+									<div class="review_text">
+										<p>三人目のレビュアーや〜〜〜〜！！</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="/00000001/gourmet.html">
+						<div class="gourmet_img">
+						<%=link_to image_tag("sample04.jpg" )%>
+						</div>
+						<div class="gourmet_text">
+							<div class="restaurant">店名店名店名店名店名</div>
+							<div class="area">〇〇県〇〇〇〇市</div>
+							<div class="gourmet_name">商品名商品名商品名商品名商品名</div>
+							<ul class="review">
+								<li>
+									<div class="rating" data-rate="4"></div>
+									<div class="review_text">
+										<p>うまみの宝石箱や〜！！レビュー1件づつ順番に出す〜〜〜</p>
+									</div>
+								</li>
+								<li>
+									<div class="rating" data-rate="2.5"></div>
+									<div class="review_text">
+										<p>二人目のレビュアーや〜！！</p>
+									</div>
+								</li>
+								<li>
+									<div class="rating" data-rate="5"></div>
+									<div class="review_text">
+										<p>三人目のレビュアーや〜〜〜〜！！</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="/00000001/gourmet.html">
+						<div class="gourmet_img">
+						<%=link_to image_tag("sample05.jpg")%>
+						</div>
+						<div class="gourmet_text">
+							<div class="restaurant">店名店名店名店名店名</div>
+							<div class="area">〇〇県〇〇〇〇市</div>
+							<div class="gourmet_name">商品名商品名商品名商品名商品名</div>
+							<ul class="review">
+								<li>
+									<div class="rating" data-rate="4"></div>
+									<div class="review_text">
+										<p>うまみの宝石箱や〜！！レビュー1件づつ順番に出す〜〜〜</p>
+									</div>
+								</li>
+								<li>
+									<div class="rating" data-rate="2.5"></div>
+									<div class="review_text">
+										<p>二人目のレビュアーや〜！！</p>
+									</div>
+								</li>
+								<li>
+									<div class="rating" data-rate="5"></div>
+									<div class="review_text">
+										<p>三人目のレビュアーや〜〜〜〜！！</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="/00000001/gourmet.html">
+						<div class="gourmet_img">
+					<%=link_to image_tag("sample06.jpg")%>
+					</div>
+						<div class="gourmet_text">
+							<div class="restaurant">店名店名店名店名店名</div>
+							<div class="area">〇〇県〇〇〇〇市</div>
+							<div class="gourmet_name">商品名商品名商品名商品名商品名</div>
+							<ul class="review">
+								<li>
+									<div class="rating" data-rate="4"></div>
+									<div class="review_text">
+										<p>うまみの宝石箱や〜！！レビュー1件づつ順番に出す〜〜〜</p>
+									</div>
+								</li>
+								<li>
+									<div class="rating" data-rate="2.5"></div>
+									<div class="review_text">
+										<p>二人目のレビュアーや〜！！</p>
+									</div>
+								</li>
+								<li>
+									<div class="rating" data-rate="5"></div>
+									<div class="review_text">
+										<p>三人目のレビュアーや〜〜〜〜！！</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div><!-- /pickup_gourmet -->
+
+	</div>
+</main>
+
+<div id="pagetop">ページトップ</div>
+
+<footer>
+	<p id="copyright">Copyright&copy; SUZUKI TAKEHIKO All Rights Reserved.</p>
+</footer>
+
+</div><!-- /wrapper -->
+

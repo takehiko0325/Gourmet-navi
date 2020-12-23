@@ -7,8 +7,53 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<meta name="robots" content="noindex">
+<meta name="description" content="おすすめメニューをみんなでシェア！飲食店メニューの口コミサイト">
+<meta name="keywords" content="目玉グルメナビ,飲食店,メニュー,商品,口コミ,評価,レビュー,評判">
+<link rel="shortcut icon" href="/assets/images/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="目玉ナビ" />
+<link rel="index" href="https://gourmet-navi.herokuapp.com" />
+<link rel="stylesheet" type="text/css" href="style.css">
+<!-- OGP -->
+<meta property="og:title" content="目玉グルメナビ" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://gourmet-navi.herokuapp.com" />
+<meta property="og:image" content="https://gourmet-navi.herokuapp.com/img/ogp_logo.jpg" />
+<meta property="og:site_name"  content="目玉グルメナビ" />
+<meta property="og:description" content="おすすめメニューをみんなでシェア！飲食店メニューの口コミサイト" />
+<meta name="twitter:card" content="summary_large_image" />
+<!-- common -->
+<link rel="stylesheets" href="assets/stylesheets/reset.css">
+<link rel="stylesheet" href="/css/common_y.css">
+<link rel="stylesheet" href="/css/common_t.css">
+<script src="javascript/jquery-3.4.1.min.js"></script>
+<script src="javascript/common.js"></script>
+<!-- slick -->
+<link rel="stylesheets" href="assets/stylesheets/slick.css">
+<script src="javascript/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+ $('#mainvisual').slick({
+   autoplay: true,
+		speed:1500,
+		pauseOnHover:false,
+		centerMode: true,
+		centerPadding: '10%',
+    arrows: false
+ });
+	$('.review').slick({
+    autoplay: true,
+    adaptiveHeight: true,
+    arrows: false,
+		vertical:true
+  });
+ });
+</script>
+<title>目玉グルメナビ</title>
+</head>
   <body>
     <%= yield %>
   </body>
