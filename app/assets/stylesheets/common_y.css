@@ -61,6 +61,18 @@ input[type="text"]:focus {
   -webkit-border-radius: 10px;
   border-radius: 10px;
 }
+.shops_new {
+  display: inline-block;
+  background-color: #451c07;
+  color: #fff;
+  padding: 12px 30px;
+  line-height: 1;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+
+}
+
 .btn_s:hover {
   background-color: #6d3f27;
   color: #fff;

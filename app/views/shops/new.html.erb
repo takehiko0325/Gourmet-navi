@@ -1,18 +1,11 @@
 <div class="shops-contents">
-  <header class="shops-header">
-    <%= link_to image_tag('medama.png' , size: '185x50'), "/" %>
-
-  </header>
+  <%= render "shared/second-header" %>
   <div class="shops-main">
     <h2 class="shops-title">店舗の情報を入力</h2>
     <%= form_with model: @shop,  url:shops_path, local: true do |f| %>
 
-   
     <%= render 'template/error_messages', model: f.object %>
-    
-    
 
-  
     <div class="new-shops">
       <div class="weight-bold-text">
         店名
@@ -24,7 +17,7 @@
           お店の特徴
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :explanation, class:"shops-text", id:"shop-info", placeholder:"商品の説明（必須 1,000文字まで）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。" ,rows:"7" ,maxlength:"1000" %>
+        <%= f.text_area :explanation, class:"shops-text", id:"shop-info", placeholder:"お店の特徴（こだわり、雰囲気、）" ,rows:"7" ,maxlength:"1000" %>
       </div>
     </div>
     
@@ -35,9 +28,16 @@
             ジャンル
             <span class="indispensable">必須</span>
           </div>
-         <%= f.collection_select(:genre_id, Genre.all, :id, :name,{}, {class:"select-box", id:"shop-category"}) %>
+         <%= f.collection_select(:shop_genre_id, ShopGenre.all, :id, :name,{}, {class:"select-box", id:"shop-genre"}) %>
          <div class="weight-bold-text">
-          お店の住所
+          お店の都道府県
+          <div class="weight-bold-text">
+            ジャンル
+            <span class="indispensable">必須</span>
+          </div>
+         <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name,{}, {class:"select-box", id:"shop-prefecture"}) %>
+         <div class="weight-bold-text">
+         お店の市区町村
           <span class="indispensable">必須</span>
         </div>
        <%= f.text_area :name, class:"shops-text", id:"shops-address" %>
@@ -45,21 +45,14 @@
           お店の電話番号
           <span class="indispensable">必須</span>
         </div>
-       <%= f.text_area :name, class:"shops-text", id:"shops-address" %> <div class="weight-bold-text">
+       <%= f.text_area :name, class:"shops-text", id:"shops-number" %> <div class="weight-bold-text">
           お店の営業時間
           <span class="indispensable">必須</span>
         </div>
-       <%= f.text_area :name, class:"shops-text", id:"shops-address" %>
-
-       
+       <%= f.text_area :name, class:"shops-text", id:"shops-times" %> 
       </div>
     </div>
-
-  
-   
-
-    
-    <div class="price">
+  <div class="price">
       <div class="weight-bold-text question-text">
         <span>予算<br>(¥300〜100000)</span>
         <a class="question" href="#">?</a>
@@ -76,27 +69,11 @@
       </div>
     </div>
 
-
-   
-
- 
     <div class="sell-btn-contents">
       <%= f.submit "登録する" ,class:"shop-btn" %>
       <%=link_to 'もどる', root_path, class:"back-btn" %>
-    </div>
-
-  </div>
+   </div>
   <% end %>
-
-  <footer class="shops-sell-footer">
-    <ul class="menu">
-      <li><a href="#">プライバシーポリシー</a></li>
-      <li><a href="#">利用規約</a></li>
-      <li><a href="#">特定商取引に関する表記</a></li>
-    </ul>
-    <%= link_to image_tag('medama.png' , size: '185x50'), "/" %>
-    <p class="inc">
-      ©︎Medama,Inc.
-    </p>
-  </footer>
+ <%= render "shared/second-footer"%> 
+ </div>
 </div>
