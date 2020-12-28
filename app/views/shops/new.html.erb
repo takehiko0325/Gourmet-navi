@@ -17,12 +17,12 @@
           お店の特徴
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :explanation, class:"shops-text", id:"shop-info", placeholder:"お店の特徴（こだわり、雰囲気、）" ,rows:"7" ,maxlength:"1000" %>
+        <%= f.text_area :explanation, class:"shops-text", id:"shop-info", placeholder:"お店の特徴（こだわり、雰囲気、お知らせ 必須 1000文字まで）" ,rows:"7" ,maxlength:"1000" %>
       </div>
     </div>
-    
+       <div class="shops-title">お店の基本情報</div>
     <div class="shops-detail">
-      <div class="weight-bold-text">お店の基本情報</div>
+   
         <div class="form">
           <div class="weight-bold-text">
             ジャンル
@@ -31,49 +31,51 @@
          <%= f.collection_select(:shop_genre_id, ShopGenre.all, :id, :name,{}, {class:"select-box", id:"shop-genre"}) %>
          <div class="weight-bold-text">
           お店の都道府県
+           <span class="indispensable">必須</span>
+        </div>
           <div class="weight-bold-text">
-            ジャンル
-            <span class="indispensable">必須</span>
-          </div>
+           
+        
+        </div>
          <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name,{}, {class:"select-box", id:"shop-prefecture"}) %>
          <div class="weight-bold-text">
          お店の市区町村
           <span class="indispensable">必須</span>
         </div>
-       <%= f.text_area :name, class:"shops-text", id:"shops-address" %>
+       <%= f.text_field :name, class:"shops-text", id:"shops-address"   %>
         <div class="weight-bold-text">
           お店の電話番号
           <span class="indispensable">必須</span>
         </div>
-       <%= f.text_area :name, class:"shops-text", id:"shops-number" %> <div class="weight-bold-text">
+       <%=f.text_field :name, class:"shops-text", id:"shops-number" ,placeholder:"例)052-123-4567" %> <div class="weight-bold-text">
           お店の営業時間
           <span class="indispensable">必須</span>
         </div>
-       <%= f.text_area :name, class:"shops-text", id:"shops-times" %> 
+       <%= f.text_field :name, class:"shops-text", id:"shops-times"  ,placeholder:"例)17:00~23:00(L.O 22:30)"%> 
+
       </div>
     </div>
   <div class="price">
-      <div class="weight-bold-text question-text">
-        <span>予算<br>(¥300〜100000)</span>
-        <a class="question" href="#">?</a>
+      <div class="weight-bold-text ">
+        <div>予算
+        <span class="indispensable">必須</span>
+        </div>
+        <br>(¥300〜100000円)
       </div>
-      <div>
         <div class="price-content">
           <div class="price-text">
             <span>価格</span>
-            <span class="indispensable">必須</span>
+           
           </div>
           <span class="sell-yen">¥</span>
           <%= f.text_field :value, class:"price-input", id:"shop-price", placeholder:"例）1000" %>
-        </div>
-      </div>
-    </div>
+       </div>
+  </div>
 
-    <div class="sell-btn-contents">
+    <div class="shop-btn-contents">
       <%= f.submit "登録する" ,class:"shop-btn" %>
       <%=link_to 'もどる', root_path, class:"back-btn" %>
    </div>
   <% end %>
  <%= render "shared/second-footer"%> 
- </div>
 </div>
