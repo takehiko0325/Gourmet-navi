@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2020-12-18T06:54:00.416Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.52.0 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36" etag="oQYHAEzW16_cUQq5gZsq" version="13.10.0" type="embed">
+<mxfile host="65bd71144e" modified="2020-12-28T07:29:42.247Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.52.1 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36" etag="1SipDQ0IhroSaDBG1pTc" version="13.10.0" type="embed">
     <diagram id="qHRAzXIBfsRkN0XlYLpz" name="ページ1">
-        <mxGraphModel dx="369" dy="565" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="897" dy="850" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -19,10 +19,10 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="7" value="shop" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="500" y="120" width="210" height="286" as="geometry"/>
+                    <mxGeometry x="500" y="120" width="210" height="296" as="geometry"/>
                 </mxCell>
-                <mxCell id="90" value="&lt;br&gt;&lt;br&gt;name&lt;br&gt;&lt;br&gt;prefecture_id&lt;br&gt;&lt;br&gt;shop_genre_id&lt;br&gt;&lt;br&gt;city&lt;br&gt;&lt;br&gt;address&lt;br&gt;&lt;br&gt;phone_number&lt;br&gt;&lt;br&gt;user&lt;br&gt;&lt;br&gt;menu&lt;br&gt;&lt;br&gt;&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="7" vertex="1">
-                    <mxGeometry y="26" width="210" height="260" as="geometry"/>
+                <mxCell id="90" value="&lt;br&gt;&lt;br&gt;name&lt;br&gt;&lt;br&gt;&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; line-height: 18px&quot;&gt;&lt;span style=&quot;color: #569cd6&quot;&gt;explanation&lt;/span&gt; &lt;/div&gt;&lt;br&gt;prefecture_id&lt;br&gt;&lt;br&gt;shop_genre_id&lt;br&gt;&lt;br&gt;city&lt;br&gt;&lt;br&gt;phone_number&lt;br&gt;&lt;br&gt;price&lt;br&gt;&lt;br&gt;user&lt;br&gt;&lt;br&gt;menu&lt;br&gt;&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="7" vertex="1">
+                    <mxGeometry y="26" width="210" height="270" as="geometry"/>
                 </mxCell>
                 <mxCell id="11" value="menu" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
                     <mxGeometry x="500" y="610" width="160" height="126" as="geometry"/>

@@ -1,10 +1,10 @@
+ <%= render "shared/second-header" %>
 <div class="shops-contents">
-  <%= render "shared/second-header" %>
   <div class="shops-main">
     <h2 class="shops-title">店舗の情報を入力</h2>
     <%= form_with model: @shop,  url:shops_path, local: true do |f| %>
 
-    <%= render 'template/error_messages', model: f.object %>
+   <%= render 'shared/error_messages',model: f.object %>
 
     <div class="new-shops">
       <div class="weight-bold-text">
@@ -28,7 +28,7 @@
             ジャンル
             <span class="indispensable">必須</span>
           </div>
-         <%= f.collection_select(:shop_genre_id, ShopGenre.all, :id, :name,{}, {class:"select-box", id:"shop-genre"}) %>
+         <%= f.collection_select(:shop_genre_id , ShopGenre.all, :id, :name,{}, {class:"select-box", id:"shop-genre"}) %>
          <div class="weight-bold-text">
           お店の都道府県
            <span class="indispensable">必須</span>
@@ -42,16 +42,16 @@
          お店の市区町村
           <span class="indispensable">必須</span>
         </div>
-       <%= f.text_field :name, class:"shops-text", id:"shops-address"   %>
+       <%= f.text_field :city, class:"shops-text", id:"shops-city"   %>
         <div class="weight-bold-text">
           お店の電話番号
-          <span class="indispensable">必須</span>
+          <%# <span class="indispensable">必須</span> %>
         </div>
-       <%=f.text_field :name, class:"shops-text", id:"shops-number" ,placeholder:"例)052-123-4567" %> <div class="weight-bold-text">
+       <%=f.text_field :phone_number, class:"shops-text", id:"shops-number" ,placeholder:"例)052-123-4567" %> <div class="weight-bold-text">
           お店の営業時間
           <span class="indispensable">必須</span>
         </div>
-       <%= f.text_field :name, class:"shops-text", id:"shops-times"  ,placeholder:"例)17:00~23:00(L.O 22:30)"%> 
+       <%= f.text_field :times, class:"shops-text", id:"shops-times"  ,placeholder:"例)17:00~23:00(L.O 22:30)"%> 
 
       </div>
     </div>
@@ -68,7 +68,7 @@
            
           </div>
           <span class="sell-yen">¥</span>
-          <%= f.text_field :value, class:"price-input", id:"shop-price", placeholder:"例）1000" %>
+          <%= f.text_field :price, class:"price-input", id:"shops-price", placeholder:"例）1000" %>
        </div>
   </div>
 
@@ -77,5 +77,5 @@
       <%=link_to 'もどる', root_path, class:"back-btn" %>
    </div>
   <% end %>
- <%= render "shared/second-footer"%> 
+
 </div>
