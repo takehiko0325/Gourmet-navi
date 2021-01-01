@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(version: 2020_12_19_144720) do
     t.integer "shop_genre_id", null: false
     t.string "city", null: false
     t.string "phone_number"
-    t.string "price", null: false
+    t.integer "price", null: false
     t.string "times", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
