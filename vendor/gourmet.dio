@@ -1,6 +1,12 @@
+<<<<<<< Updated upstream
 <mxfile host="65bd71144e" modified="2020-12-28T07:29:42.247Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.52.1 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36" etag="1SipDQ0IhroSaDBG1pTc" version="13.10.0" type="embed">
     <diagram id="qHRAzXIBfsRkN0XlYLpz" name="ページ1">
         <mxGraphModel dx="897" dy="850" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+=======
+<mxfile host="65bd71144e" modified="2020-12-27T19:16:38.254Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.52.1 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36" etag="MGU1udNie3T9IZmQBxLa" version="13.10.0" type="embed">
+    <diagram id="qHRAzXIBfsRkN0XlYLpz" name="ページ1">
+        <mxGraphModel dx="763" dy="1150" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+>>>>>>> Stashed changes
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
