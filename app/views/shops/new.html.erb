@@ -2,7 +2,7 @@
 <div class="shops-contents">
   <div class="shops-main">
     <h2 class="shops-title">店舗の情報を入力</h2>
-    <%= form_with model: @shop,  url:shops_path, local: true do |f| %>
+    <%= form_with model: @shop, url:confirm_shops_path, local: true do |f| %>
 
    <%= render 'shared/error_messages',model: f.object %>
 

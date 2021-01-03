@@ -14,6 +14,13 @@ class ShopsController < ApplicationController
  def  show  
  end
 
+ def confirm
+  @shop = Shop.new(shop_params)
+  if @shop.invalid?
+  render :new
+  end 
+ end
+
  def create
   @shop = Shop.new(shop_params)
    if @shop.valid?
