@@ -8,65 +8,24 @@
 		</h1>
 		<div id="header_search_wrap">
 			<div class="search_box">
-				<h4>店舗を検索</h4>
-				<div class="select_btn">
-					<select name="select" onChange="location.href=value;">
-						<option value="#">ジャンルで検索</option>
-						<option value="/restaurant_list.html">ジャンル名</option>
-						<option value="/restaurant_list.html">ジャンル名</option>
-						<option value="/restaurant_list.html">ジャンル名</option>
-						<option value="/restaurant_list.html">ジャンル名</option>
-						<option value="/restaurant_list.html">ジャンル名</option>
-					</select>
-				</div>
-				<div class="select_btn">
-					<select name="select" onChange="location.href=value;">
-						<option value="#">地域で検索</option>
-						<option value="/restaurant_list.html">地域名</option>
-						<option value="/restaurant_list.html">地域名</option>
-						<option value="/restaurant_list.html">地域名</option>
-						<option value="/restaurant_list.html">地域名</option>
-						<option value="/restaurant_list.html">地域名</option>
-					</select>
-				</div>
-			</div><!-- /search_box -->
-			<div class="search_box">
-				<h4>グルメを検索</h4>
-				<div class="select_btn">
-					<select name="select" onChange="location.href=value;">
-						<option value="#">ジャンルで検索</option>
-						<option value="/gourmet_list.html">ジャンル名</option>
-						<option value="/gourmet_list.html">ジャンル名</option>
-						<option value="/gourmet_list.html">ジャンル名</option>
-						<option value="/gourmet_list.html">ジャンル名</option>
-						<option value="/gourmet_list.html">ジャンル名</option>
-					</select>
-				</div>
-				<div class="select_btn">
-					<select name="select" onChange="location.href=value;">
-						<option value="#">地域で検索</option>
-						<option value="/gourmet_list.html">地域名</option>
-						<option value="/gourmet_list.html">地域名</option>
-						<option value="/gourmet_list.html">地域名</option>
-						<option value="/gourmet_list.html">地域名</option>
-						<option value="/gourmet_list.html">地域名</option>
-					</select>
-				</div>
-			</div><!-- /search_box -->
+				<h4>検索</h4>
+					<%= link_to '地域で検索', new_shop_path, class:"btn_s shop"%> 
+					<%= link_to 'ジャンルで検索', new_shop_path, class:"btn_s shop"%> 
+			</div>
 		</div><!-- /header_search_wrap -->
 		<div id="header_usernav_wrap">
 			
 			 <% if user_signed_in? %> 
      <div id="header_usernav_login">
 				<div id="header_usernav_username"> 
-				<%= link_to "#{current_user.name}様",class:"btn_s name"%>
+		<%= link_to "#{current_user.name}様",class:"btn_s name"%>
 				
 				<%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"btn_s logout" %>
 					<%= link_to 'お店の登録はこちら', new_shop_path, class:"btn_s shop"%> 
 		  	</div>
 		</div>
 			 <% else %>
-	   <div id="header_usernav_nologin">  
+	   <div id="header_usernav_nologin"> 
 				<%= link_to 'ログイン', new_user_session_path, class:"btn_s login"%>
 			<%= link_to '新規登録', new_user_registration_path, class:"btn_s signup"%>
 			</div>

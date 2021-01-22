@@ -1,0 +1,4 @@
+<div class="search-field">
+        <%= f.label :shop_genre_id_eq, 'ジャンル' %>
+        <%= f.collection_select :shop_genre_id_eq, ShopGenre.all, :id, :name, include_blank: '指定なし'%>
+        </div>

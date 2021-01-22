@@ -1,0 +1,71 @@
+<%= render "shared/header" %>
+
+<div class="shop-show">
+  <div class="shop-contents">
+    <h2 class="name">
+      <%= @shop.name %>
+    </h2>
+    </div>
+  
+  <%unless @item.users_item.present?%> 
+   <% if user_signed_in? %> 
+    <% if current_user.id == @shop.user.id%>  
+    <%= link_to '店舗の編集',  edit_item_path(@shop) , method: :get, class: "shop-red-btn" %>
+    <p class='or-text'>or</p>
+    <%= link_to '削除', shop_path(@shop), method: :delete, class:'shop-destroy' %>
+   <% elsif %>
+  <% end %>
+   <% end %>
+    <% end %>
+  
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-shop">店名</th>
+          <td class="detail-value"><%= @shop.name%></td>
+        </tr>
+        <tr>
+          <th class="detail-shop">お店の特徴</th>
+          <td class="detail-value"><%= @shop.explanation.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-shop">ジャンル</th>
+          <td class="detail-value"><%= @shop.shop_genre.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-shop">都道府県/th>
+          <td class="detail-value"><%= @shop.prefecture.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-shop">市区町村</th>
+          <td class="detail-value"><%= @shop.city.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-shop">電話番号</th>
+          <td class="detail-value"><%=  @shop.phone_number.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-shop">営業時間</th>
+          <td class="detail-value"><%=  @shop.times.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-shop">予算</th>
+          <td class="detail-value"><%=  @shop.price.name %></td>
+        </tr>
+      </tbody>
+    </table>
+   
+</div>
+
+
+  <div class="comment-box">
+   
+      <textarea class="comment-text"></textarea>
+      <p class="comment-warn">
+        「みんなで作るグルメナビ」という性質上、店舗情報の正確性は保証されませんので
+        <br>
+        必ず事前にご確認の上ご利用ください
+      </p>
+  </div>
+ 
+<%= render "shared/footer" %>
